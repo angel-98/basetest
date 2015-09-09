@@ -11,6 +11,24 @@
 |
 */
 
+/**
+ * Esta es la ruta del root por defecto
+ */
+Route::get('/', function () {
+	return view('welcome');
+});
+
+/*
+|--------------------------------------------------------------------------
+| Rutas de autentificación
+|--------------------------------------------------------------------------
+|
+| Aqui estamos usando las rutas de autentificación por defecto que
+| ofrece laravel y los controladores que heredan funcionalidad de
+| Auth. Solo bastara con darle un theme a las vistas
+|
+*/
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
@@ -29,7 +47,8 @@ Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 Route::get('home', 'DashController@home');
+/*
+|--------------------------------------------------------------------------
+*/
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
