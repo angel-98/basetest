@@ -10,7 +10,8 @@
         "illuminate/html": "~5.0",
         "barryvdh/laravel-dompdf": "0.6.*",
         "cviebrock/eloquent-sluggable": ">=3.0.0-beta",
-        "orangehill/iseed": "dev-master"
+        "orangehill/iseed": "dev-master",
+        "caffeinated/shinobi": "~2.0"
 
     },
     "require-dev": {
