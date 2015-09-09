@@ -1,0 +1,23 @@
+{
+  "name": "trackhn",
+  "version": "1.5",
+  "homepage": "https://github.com/gbelot2003/tracking",
+  "authors": [
+    "gbelot2003 <gerardobelot@outlook.com>"
+  ],
+  "description": "Trackhn upgrade to Laravel 5.1",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "~0.97.0",
+    "select2": "~4.0.0",
+    "angularjs": "~1.4.1"
+  }
+}
