@@ -16,14 +16,39 @@
 			</div>
 
 			<div class="menu-content">
+
 				<ul class="nav">
 					<li>
 						<a class="waves-attach" href="javascript:void(0)"><span class="icon icon-lg">account_box</span>Profile Settings</a>
+
 					</li>
+
 					<li>
 						<a class="waves-attach" href="/auth/logout"><span class="icon icon-lg">exit_to_app</span>Logout</a>
 					</li>
 				</ul>
+
+				<!-- Settings, Only authorized users can see this -->
+				<hr />
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" href="javascript:void(0)"><span class="icon icon-lg">settings</span>Settings</a>
+						<span class="menu-collapse-toggle collapsed" data-target="#page-settings" data-toggle="collapse"><i class="icon menu-collapse-toggle-close">close</i><i class="icon menu-collapse-toggle-default">add</i></span>
+						<ul class="menu-collapse collapse" id="page-settings">
+							<li>
+								<a class="waves-attach" href="/users">Usuarios</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="/permissions">Permisos</a>
+							</li>
+							<li>
+								<a class="waves-attach" href="/Roles">Roles</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<!-- settings --->
+
 			</div>
 
 		@else
