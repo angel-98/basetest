@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Caffeinated\Shinobi\Models\Role;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -9,6 +10,12 @@ use App\Http\Controllers\Controller;
 
 class RolesController extends Controller
 {
+
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +23,8 @@ class RolesController extends Controller
      */
     public function index()
     {
-        return View('roles.index');
+		$roles = Role::all();
+        return View('roles.index', compact('roles'));
     }
 
     /**
@@ -26,8 +34,9 @@ class RolesController extends Controller
      */
     public function create()
     {
-        //
-    }
+		$roles = Role::all();
+		return View('roles.index', compact('roles'));
+	}
 
     /**
      * Store a newly created resource in storage.
@@ -37,7 +46,7 @@ class RolesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -48,7 +57,8 @@ class RolesController extends Controller
      */
     public function show($id)
     {
-        //
+		$roles = Role::all();
+		return View('roles.index', compact('roles'));
     }
 
     /**
@@ -59,7 +69,8 @@ class RolesController extends Controller
      */
     public function edit($id)
     {
-        //
+		$roles = Role::all();
+		return View('roles.index', compact('roles'));
     }
 
     /**
