@@ -14,6 +14,7 @@ class DashController extends Controller
 	public function __construct()
 	{
 		$this->middleware('auth',['except' => ['landing']]);
+		$this->middleware('guest',['only' => ['landing']]);
 	}
 
     public function home()
@@ -23,6 +24,6 @@ class DashController extends Controller
 
 	public function landing()
 	{
-		return View('dash.landing');
+		return View('dash.landing')->with('flash_message', 'hay un error');
 	}
 }

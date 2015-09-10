@@ -50,12 +50,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12">
+				@yield('partials._flash')
 				<section class="content-inner">
-					<p>Material is an HTML5 UI design based on Google Material.</p>
-					<blockquote>
-						<p>A visual language for our users that synthesizes the classic principles of good design with the innovation and possibility of technology and science. This is material design.</p>
-						<p><a class="text-break" href="http://www.google.com/design/spec/material-design/introduction.html">http://www.google.com/design/spec/material-design/introduction.html</a></p>
-					</blockquote>
+					@yield('content')
 				</section>
 			</div>
 		</div>
