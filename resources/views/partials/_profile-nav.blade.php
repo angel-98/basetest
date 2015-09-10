@@ -42,7 +42,7 @@
 								<a class="waves-attach" href="/permissions">Permisos</a>
 							</li>
 							<li>
-								<a class="waves-attach" href="/Roles">Roles</a>
+								<a class="waves-attach" href="/roles">Roles</a>
 							</li>
 						</ul>
 					</li>
