@@ -1,5 +1,6 @@
 @extends('layout.app')
 @section('page-title', 'Administración de Roles')
+@section('v-control', 'id="roles"')
 
 @section('content')
 	<div class="row">
@@ -17,6 +18,9 @@
 			<tbody>
 			</tbody>
 		</table>
+	</div>
+	<div class="row">
+		<pre>@{{ $data | json }}</pre>
 	</div>
 @stop
 
@@ -39,4 +43,8 @@
 			</div>
 		</div>
 	</div>
+@stop
+
+@section('post-script')
+	<script src="/js/vue-roles.js"></script>
 @stop
