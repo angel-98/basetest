@@ -50,3 +50,17 @@ Route::get('home', 'DashController@home');
 */
 
 
+/*
+|--------------------------------------------------------------------------
+| Rutas resource de settings y usarios
+|--------------------------------------------------------------------------
+| Rutas especificas para el manejo de usuarios roles y permisos
+|
+*/
+
+Route::resource('users', 'UserController');
+
+Route::resource('permissions', 'PermissionController');
+
+Route::resource('roles', 'RolesController');
+
