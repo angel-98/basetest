@@ -14,9 +14,7 @@
 /**
  * Esta es la ruta del root por defecto
  */
-Route::get('/', function () {
-	return view('welcome');
-});
+Route::get('/', 'DashController@landing');
 
 /*
 |--------------------------------------------------------------------------

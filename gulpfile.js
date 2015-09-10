@@ -13,4 +13,9 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
+
+    // Librerias de uso general en la aplicación
+    mix.scripts(['jquery2.1.4.min.js', 'base.js', 'init.js'], 'public/js/app.js');
+
 });
+
