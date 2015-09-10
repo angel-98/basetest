@@ -16,6 +16,7 @@ elixir(function(mix) {
 
     // Librerias de uso general en la aplicación
     mix.scripts(['jquery2.1.4.min.js', 'base.js', 'init.js'], 'public/js/app.js');
+    mix.scripts(['vue/vue.min.js', 'vue/vue-resource.min.js', 'vue/vue-roles.js'], 'public/js/vue-roles.js');
 
 });
 
