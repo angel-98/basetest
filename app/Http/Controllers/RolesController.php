@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RolesRequest;
 use Caffeinated\Shinobi\Models\Role;
 use Illuminate\Http\Request;
 
@@ -44,9 +45,10 @@ class RolesController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(RolesRequest $request)
     {
-
+		$roles = Role::create($request->all());
+		return $roles->latest()->get();
     }
 
     /**
@@ -57,8 +59,8 @@ class RolesController extends Controller
      */
     public function show($id)
     {
-		$roles = Role::all();
-		return View('roles.index', compact('roles'));
+		$roles = Role::findBySlug($id);
+		return View('roles.edit', compact('roles'));
     }
 
     /**
@@ -80,9 +82,12 @@ class RolesController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(RolesRequest $request, $id)
     {
-        //
+        $roles = Role::findOrFail($id);
+		$roles->update($request->all());
+
+		return redirect('roles');
     }
 
     /**
