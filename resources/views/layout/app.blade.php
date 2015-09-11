@@ -40,7 +40,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<h1 class="heading">@yield('page-title', 'Basetest')</h1>
+						<h1 class="heading margin-top-no">@yield('page-title', 'Basetest')</h1>
 					</div>
 				</div>
 			</div>
@@ -49,9 +49,14 @@
 
 	<div class="container">
 		<div class="row">
+			<ol class="breadcrumb">
+				@yield('breadcrumb')
+			</ol>
+		</div>
+		<div class="row">
 			<div class="col-sm-12">
 				@yield('partials._flash')
-				<section class="content-inner">
+				<section class="content-inner margin-top-no">
 					@yield('content')
 				</section>
 			</div>
