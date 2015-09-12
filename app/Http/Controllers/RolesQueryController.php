@@ -10,6 +10,20 @@ use App\Http\Controllers\Controller;
 
 class RolesQueryController extends Controller
 {
+	/**
+	 * Middleware user validation
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+
+	/**
+	 * index request, search impruved
+	 * @param null $page
+	 * @param null $search
+	 * @return array
+	 */
     public function getIndex($page = null, $search = null)
 	{
 		$counter = 5;
@@ -38,7 +52,6 @@ class RolesQueryController extends Controller
 				'total' => $total,
 				'items' => $roles
 			];
-
 
 		} else {
 

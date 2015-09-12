@@ -12,6 +12,9 @@ use App\Http\Controllers\Controller;
 class RolesController extends Controller
 {
 
+	/**
+	 * Middleware user validation
+	 */
 	public function __construct()
 	{
 		$this->middleware('auth');
@@ -98,6 +101,7 @@ class RolesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $roles = Role::findOrFail($id)->delete();
+		return redirect('roles')->with('flash_message', 'Rol eliminado');
     }
 }
