@@ -39,10 +39,10 @@
 								<a class="waves-attach" href="/usuarios">Usuarios</a>
 							</li>
 							<li>
-								<a class="waves-attach" href="/permisos">Permisos</a>
+								<a class="waves-attach" href="/roles">Roles</a>
 							</li>
 							<li>
-								<a class="waves-attach" href="/roles">Roles</a>
+								<a class="waves-attach" href="/permisos">Permisos</a>
 							</li>
 						</ul>
 					</li>
