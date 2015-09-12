@@ -58,10 +58,9 @@ Route::get('home', 'DashController@home');
 |
 */
 
-Route::resource('users', 'UserController');
+Route::resource('usuarios', 'UserController');
 
-Route::resource('permissions', 'PermissionController');
-
+Route::resource('permisos', 'PermissionController');
 
 Route::resource('roles', 'RolesController');
 
