@@ -64,6 +64,8 @@ Route::resource('permisos', 'PermissionController');
 
 Route::resource('roles', 'RolesController');
 
+Route::resource('usuarios', 'UsuariosController');
+
 /*
 |--------------------------------------------------------------------------
 | Rutas de consulta abiertas
