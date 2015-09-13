@@ -64,7 +64,7 @@ Route::resource('permisos', 'PermissionController');
 
 Route::resource('roles', 'RolesController');
 
-Route::resource('usuarios', 'UsuariosController');
+Route::resource('usuarios', 'UserController');
 
 /*
 |--------------------------------------------------------------------------
@@ -75,5 +75,6 @@ Route::resource('usuarios', 'UsuariosController');
 Route::controllers([
 	'roles/query' 		=> 'RolesQueryController',
 	'permisos/query' 	=> 'PermissionsQueryController',
+	'usuarios/query'	=> 'UsersQueryController'
 ]);
 
