@@ -9,6 +9,14 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
+	/**
+	 * Middleware user validation
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +24,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+		return View('usuarios.index');
     }
 
     /**

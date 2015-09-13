@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
 
         Model::reguard();
     	$this->call('UsersTableSeeder');
+		$this->call('ProfilesTableSeeder');
 	}
 }
