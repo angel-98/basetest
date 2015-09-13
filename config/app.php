@@ -138,6 +138,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 		Caffeinated\Shinobi\ShinobiServiceProvider::class,
 		Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
+		Orangehill\Iseed\IseedServiceProvider::class,
 
         /*
          * Application Service Providers...
