@@ -72,5 +72,6 @@ Route::resource('roles', 'RolesController');
 
 Route::controllers([
 	'roles/query' 		=> 'RolesQueryController',
+	'permisos/query' 	=> 'PermissionsQueryController',
 ]);
 

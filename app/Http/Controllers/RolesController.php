@@ -74,7 +74,7 @@ class RolesController extends Controller
      */
     public function edit($id)
     {
-		$roles = Role::all();
+		$roles = Role::findOrFail($id);
 		return View('roles.index', compact('roles'));
     }
 

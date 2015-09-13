@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PermissionsRequest;
+use Caffeinated\Shinobi\Models\Permission;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -9,6 +11,15 @@ use App\Http\Controllers\Controller;
 
 class PermissionController extends Controller
 {
+
+	/**
+	 * Middleware user validation
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +27,7 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        //
+        return View('permissions.index');
     }
 
     /**
@@ -35,9 +46,10 @@ class PermissionController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(PermissionsRequest $request)
     {
-        //
+		$permisos = Permission::create($request->all());
+		return $permisos->latest()->get();
     }
 
     /**
@@ -59,7 +71,8 @@ class PermissionController extends Controller
      */
     public function edit($id)
     {
-        //
+		$permiso = Permission::findOrFail($id);
+		return View('permisos.index', compact('permiso'));
     }
 
     /**
@@ -69,9 +82,11 @@ class PermissionController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(PermissionsRequest $request, $id)
     {
-        //
+		$permisos = Permission::findOrFail($id);
+		$permisos->update($request->all());
+		return 'done';
     }
 
     /**
@@ -82,6 +97,7 @@ class PermissionController extends Controller
      */
     public function destroy($id)
     {
-        //
+		$permisos = Permission::findOrFail($id)->delete();
+		return 'done';
     }
 }
