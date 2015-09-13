@@ -18,14 +18,14 @@ class Profile extends Model {
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['estado', 'avatar'];
+	protected $fillable = ['user_id', 'estado', 'avatar'];
 
 	/**
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
 	 */
 	public function user()
 	{
-		return $this->belongsTo('App\User', 'users_id', 'id');
+		return $this->belongsTo('App\User', 'user_id', 'id');
 	}
 
 	/**
@@ -36,4 +36,5 @@ class Profile extends Model {
 	{
 		return (bool)$estado;
 	}
+
 }
