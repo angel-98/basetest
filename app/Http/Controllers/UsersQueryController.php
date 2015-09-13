@@ -16,6 +16,7 @@ class UsersQueryController extends Controller
 	public function __construct()
 	{
 		$this->middleware('auth');
+		$this->middleware('active');
 	}
 
 	/**
@@ -30,7 +31,7 @@ class UsersQueryController extends Controller
 		$start = ($page > 1) ? ($page * $counter) - $counter : 0;
 		if($search != null){
 
-			$user = User::with('profiles')
+			$user = User::with('profile')
 				->latest()->select(['id', 'name', 'email'])
 				->where(function ($query) use ($search) {
 					$query->where('name', 'LIKE', '%'.$search.'%')
@@ -55,7 +56,7 @@ class UsersQueryController extends Controller
 
 		} else {
 
-			$user = User::with('permissions')
+			$user = User::with('profile')
 				->latest()
 				->limit($counter)
 				->offset($start)

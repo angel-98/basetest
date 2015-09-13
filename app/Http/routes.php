@@ -45,6 +45,8 @@ Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 Route::get('home', 'DashController@home');
+
+Route::get('unauthorize', 'DashController@unauthorize');
 /*
 |--------------------------------------------------------------------------
 */

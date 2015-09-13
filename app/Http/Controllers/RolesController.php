@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\RolesRequest;
 use Caffeinated\Shinobi\Models\Role;
-use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -18,6 +17,7 @@ class RolesController extends Controller
 	public function __construct()
 	{
 		$this->middleware('auth');
+		$this->middleware('active');
 	}
 
     /**
