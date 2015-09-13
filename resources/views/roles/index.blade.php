@@ -34,8 +34,6 @@
 
 	@include('partials._pagination')
 
-	@include('partials._vue-data')
-
 @stop
 
 @section('modal')
