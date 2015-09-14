@@ -67,6 +67,7 @@ class UserController extends Controller
 				'avatar'	=> 'avatar-001.jpg'
 			]);
 			$profiles->save();
+			return redirect('usuarios')->with('flash_message', 'Perfil creado, intente ingresar de nuevo');
 		}
 
 		return View('usuarios.show', compact('usuario'));
