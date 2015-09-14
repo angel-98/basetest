@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Profile extends Model {
-
+class ProfilSkils extends Model
+{
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'profiles';
+	protected $table = 'profile_skills';
 
 	/**
 	 * @var bool
@@ -28,16 +28,9 @@ class Profile extends Model {
 	/**
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
 	 */
-	public function user()
+	public function profile()
 	{
-		return $this->belongsTo('App\User', 'user_id', 'id');
+		return $this->belongsTo('App\Profile', 'profile_id', 'id');
 	}
 
-	/**
-	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
-	 */
-	public function skills()
-	{
-		return $this->hasMany('App\ProfileSkils', 'profile_id', 'id');
-	}
 }
