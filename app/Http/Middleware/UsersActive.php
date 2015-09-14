@@ -15,7 +15,7 @@ class UsersActive
      */
     public function handle($request, Closure $next)
     {
-		if(!$request->user()->profile or $request->user()->profile->estado != 1) {
+		if($request->user()->estado != 1) {
 			return redirect('/unauthorize');
 		}
         return $next($request);

@@ -20,7 +20,7 @@ class UsersQueryController extends Controller
 	}
 
 	/**
-	 * index request, search impruved
+	 * index request, search improved
 	 * @param null $page
 	 * @param null $search
 	 * @return array
@@ -31,8 +31,7 @@ class UsersQueryController extends Controller
 		$start = ($page > 1) ? ($page * $counter) - $counter : 0;
 		if($search != null){
 
-			$user = User::with('profile')
-				->latest()->select(['id', 'name', 'email'])
+			$user = User::select(['slug', 'name', 'email', 'estado'])
 				->where(function ($query) use ($search) {
 					$query->where('name', 'LIKE', '%'.$search.'%')
 						->orWhere('email', 'LIKE', '%'.$search.'%');
@@ -56,8 +55,7 @@ class UsersQueryController extends Controller
 
 		} else {
 
-			$user = User::with('profile')
-				->latest()
+			$user = User::select(['slug', 'name', 'email', 'estado'])
 				->limit($counter)
 				->offset($start)
 				->get();

@@ -18,7 +18,6 @@ class ProfilesTableSeeder extends Seeder {
 			array (
 				'id' => 1,
 				'user_id' => 1,
-				'estado' => 1,
 				'avatar' => NULL,
 			),
 		));

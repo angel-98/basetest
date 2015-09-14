@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Profile;
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -55,9 +57,19 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+		$usuario = User::findBySlug($slug);
+
+		if(is_null($usuario->profile)){
+			$profiles = Profile::create([
+				'user_id' => $usuario->id
+			]);
+			$profiles->save();
+		}
+
+		return View('usuarios.show', compact('usuario'));
+
     }
 
     /**

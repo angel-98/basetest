@@ -14,6 +14,11 @@ class Profile extends Model {
 	protected $table = 'profiles';
 
 	/**
+	 * @var bool
+	 */
+	public $timestamps = false;
+
+	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var array
@@ -26,15 +31,6 @@ class Profile extends Model {
 	public function user()
 	{
 		return $this->belongsTo('App\User', 'user_id', 'id');
-	}
-
-	/**
-	 * @param $estado
-	 * @return bool
-	 */
-	public function getEstadoAttribute($estado)
-	{
-		return (bool)$estado;
 	}
 
 }

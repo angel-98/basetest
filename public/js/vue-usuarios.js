@@ -43,17 +43,13 @@ var v = new Vue({
         },
 
         estadoTrans: function(estado) {
+
             var state = '';
-
-            if ('estado' in estado && estado.estado) {
-                state = 'activo';
-            } else if(estado === null){
-                state = 'n/a';
+            if(estado === true){
+                state = 'Activo';
+            } else {
+                state = 'N/S';
             }
-            else {
-                state = 'n/a';
-            };
-
             return state;
         }
 

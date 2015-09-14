@@ -28,9 +28,9 @@
 			</thead>
 			<tbody>
 			<tr v-repeat="row:rows">
-				<td><a href="/usuarios/@{{ row.profile.id }}">@{{ row.name }}</a></td>
+				<td><a href="/usuarios/@{{ row.slug }}">@{{ row.name }}</a></td>
 				<td>@{{ row.email }}</td>
-				<td>@{{ estadoTrans(row.profile) }}</td>
+				<td>@{{ estadoTrans(row.estado) }}</td>
 			</tr>
 			</tbody>
 		</table>
