@@ -63,7 +63,8 @@ class UserController extends Controller
 
 		if(is_null($usuario->profile)){
 			$profiles = Profile::create([
-				'user_id' => $usuario->id
+				'user_id'	=> $usuario->id,
+				'avatar'	=> 'avatar-001.jpg'
 			]);
 			$profiles->save();
 		}
