@@ -18,10 +18,10 @@ class UsersTableSeeder extends Seeder {
 			array (
 				'id' => 1,
 				'name' => 'Gerardo Belot   ',
-				'slug' => 'gerardo-belot',
 				'email' => 'gbelot2003@hotmail.com',
-				'estado' => 1,
 				'password' => '$2y$10$OpcKFzqU1hgb53IIKvkKUu3yj9T7OQw5gbPqEN/CjNAGagL5NNUEq',
+				'slug' => 'gerardo-belot',
+				'estado' => 1,
 				'remember_token' => 'f15ysNJHV5uXVC3Auv1c5tMy80gY8Zj45dh9cZuZfIxlrKf2GcSWm2MzYE72',
 				'created_at' => '0000-00-00 00:00:00',
 				'updated_at' => '2015-09-11 22:50:07',
@@ -30,13 +30,25 @@ class UsersTableSeeder extends Seeder {
 			array (
 				'id' => 2,
 				'name' => 'Gabriel Garcia',
-				'slug' => 'gabriel-garcia',
 				'email' => 'gerardo.belot@gmail.com',
-				'estado' => 1,
 				'password' => '$2y$10$JX6bUnUVz86RKvHVhqotlepHw76IYHizHpIG5KA4lwjWb3Golkcji',
+				'slug' => 'gabriel-garcia',
+				'estado' => 1,
 				'remember_token' => 'AL9LuSoEZyJK5uHGrzoPzRiziyeUgboOr5c7G8iexiHYVIOvQSJ5A2HiyWw0',
 				'created_at' => '2015-09-09 20:27:12',
 				'updated_at' => '2015-09-09 20:31:24',
+			),
+			2 => 
+			array (
+				'id' => 3,
+				'name' => 'Enmanuel Carcamo',
+				'email' => 'necosoft@hotmail.com',
+				'password' => '$2y$10$QIgCDNJsAD/Xj9HZXYEUaOpuDNFOf4ZfeHqXNNGcLOYtMxuSLA6uO',
+				'slug' => 'enmanuel-carcamo',
+				'estado' => 0,
+				'remember_token' => NULL,
+				'created_at' => '2015-09-14 06:05:18',
+				'updated_at' => '2015-09-14 06:05:18',
 			),
 		));
 	}
