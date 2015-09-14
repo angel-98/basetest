@@ -116,3 +116,6 @@
 		</form>
 	</fildset>
 @stop
+@section('post-script')
+	<script src="/js/user-edit.js"></script>
+@stop
