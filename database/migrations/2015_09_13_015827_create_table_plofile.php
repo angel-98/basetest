@@ -18,6 +18,11 @@ class CreateTablePlofile extends Migration
 			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 			$table->string('avatar');
 			$table->text('resume')->nullable();
+			$table->string('github')->nullable();
+			$table->string('facebook')->nullable();
+			$table->string('twitter')->nullable();
+			$table->string('phone')->nullable();
+			$table->string('mobile')->nullable();
         });
     }
 
