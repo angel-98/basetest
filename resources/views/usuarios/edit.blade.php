@@ -34,6 +34,15 @@
 				</div>
 
 			</div>
+			<div class="row">
+				<hr />
+				<div class="row">
+					<p class="text-left">
+						<button type="submit"  class="btn btn-blue">Save change</button>
+						<a class="btn btn-flat btn-alt" href="/roles">Cancel</a>
+					</p>
+				</div>
+			</div>
 		</form>
 	</fildset>
 @stop
