@@ -13,7 +13,7 @@
 
 	<div class="row">
 		<div class="col-md-1 col-md-offset-11 col-sm-12 text-left">
-			<a class="fbtn fbtn-alt left" data-toggle="modal" title="Nuevo Rol" href="#modal-create"><span class="icon">add</span></a>
+			<a class="fbtn fbtn-alt left" data-toggle="modal" title="Nuevo usuario" href="#modal-create"><span class="icon">add</span></a>
 		</div>
 	</div>
 
@@ -22,13 +22,13 @@
 			<thead>
 			<tr>
 				<th>Rol</th>
-				<th>Descripción</th>
-				<th>Descripción</th>
+				<th>email</th>
+				<th>Estado</th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr v-repeat="row:rows">
-				<td><a href="/profile/@{{ row.profile.id }}">@{{ row.name }}</a></td>
+				<td><a href="/usuarios/@{{ row.profile.id }}">@{{ row.name }}</a></td>
 				<td>@{{ row.email }}</td>
 				<td>@{{ estadoTrans(row.profile) }}</td>
 			</tr>
