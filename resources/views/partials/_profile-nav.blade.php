@@ -8,10 +8,10 @@
 					<img alt="{{ Auth::user()->name }}" src="../images/samples/landscape.jpg">
 				</div>
 				<div class="menu-top-info">
-					<a class="menu-top-user" href="javascript:void(0)"><span class="avatar pull-left"><img alt="{{ Auth::user()->name }}" src="../images/users/avatar-001.jpg"></span>{{ Auth::user()->name }}</a>
+					<a class="menu-top-user" href="/usuarios/{{ Auth::user()->slug }}"><span class="avatar pull-left"><img alt="{{ Auth::user()->name }}" src="../images/users/{{ Auth::user()->profile->avatar }}"></span>{{ Auth::user()->name }}</a>
 				</div>
 				<div class="menu-top-info-sub">
-					<small>Some additional information about John Smith</small>
+					<small>{{ Auth::user()->profile->label }}</small>
 				</div>
 			</div>
 
