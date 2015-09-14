@@ -3,7 +3,8 @@
 @import "bootstrap.min";
 @import "vendor/bower_components/material-master/assets/sass/base";
 @import "project";
-@import "select2.scss";
+@import "select2";
+@import "jquery.cleditor";
 
 .nav > li > a:hover, .nav > li > a:focus{
   text-decoration: none !important;
