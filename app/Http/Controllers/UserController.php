@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\View;
 
 class UserController extends Controller
 {
@@ -80,9 +81,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)
+    public function edit($slug)
     {
-        //
+		$usuario = User::findBySlug($slug);
+		return View('usuarios.edit', compact('usuario'));
     }
 
     /**
