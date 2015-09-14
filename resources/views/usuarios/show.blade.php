@@ -14,7 +14,7 @@
 					<p class="text-center">
 						<img style="margin: 0 auto;" class="img-responsive img-thumbnail text-center" src="/images/users/{{ $usuario->profile->avatar }}" alt="{{ $usuario->name }}"/>
 					</p>
-					<p class="text-center"><a href="/usuarios/{{ $usuario->slug }}/edit">editar imagen</a></p>
+					<p class="text-center"><a href="/usuarios/{{ $usuario->slug }}/edit">editar perfil</a></p>
 				</div>
 				<div class="col-md-12">
 					<span class="text-blue">E-mail: </span> {{ $usuario->email }}
