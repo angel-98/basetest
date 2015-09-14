@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\RolesRequest;
+use Caffeinated\Shinobi\Models\Permission;
 use Caffeinated\Shinobi\Models\Role;
 
 use App\Http\Requests;
@@ -39,7 +40,8 @@ class RolesController extends Controller
     public function create()
     {
 		$roles = Role::all();
-		return View('roles.index', compact('roles'));
+		$permisos = Permission::all();
+		return View('roles.index', compact('roles', 'permisos'));
 	}
 
     /**
@@ -63,7 +65,8 @@ class RolesController extends Controller
     public function show($id)
     {
 		$roles = Role::findBySlug($id);
-		return View('roles.edit', compact('roles'));
+		$permisos = Permission::all();
+		return View('roles.edit', compact('roles', 'permisos'));
     }
 
     /**
@@ -75,7 +78,8 @@ class RolesController extends Controller
     public function edit($id)
     {
 		$roles = Role::findOrFail($id);
-		return View('roles.index', compact('roles'));
+		$permisos = Permission::all();
+		return View('roles.index', compact('roles', 'permisos'));
     }
 
     /**
@@ -88,7 +92,15 @@ class RolesController extends Controller
     public function update(RolesRequest $request, $id)
     {
         $roles = Role::findOrFail($id);
+		if($request->input('permisos') == null){
+			$roles->revokeAllPermissions();
+
+		} else {
+			$roles->syncPermissions($request->input('permisos'));
+		}
+
 		$roles->update($request->all());
+
 
 		return redirect('roles');
     }

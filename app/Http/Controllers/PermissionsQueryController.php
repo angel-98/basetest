@@ -20,7 +20,8 @@ class PermissionsQueryController extends Controller
 	}
 
 	/**
-	 * index request, search impruved
+	 * Request roles list index, search and pagination improved
+	 * /permisos/query
 	 * @param null $page
 	 * @param null $search
 	 * @return array
@@ -40,11 +41,6 @@ class PermissionsQueryController extends Controller
 				->get();
 
 			$total = $permisos->count();
-
-			/**$total = Role::where(function ($query) use ($search) {
-			$query->where('name', 'LIKE', '%'.$search.'%')
-			->orWhere('description', 'LIKE', '%'.$search.'%');
-			})->count();**/
 
 			return $permisos = [
 				'itemsPerPage' => $counter,
@@ -66,4 +62,59 @@ class PermissionsQueryController extends Controller
 			];
 		}
 	}
+
+	/**
+	 * Listado de permisos
+	 * /permisos/query/permisos-list
+	 * @return \Illuminate\Database\Eloquent\Collection|static[]
+	 */
+	public function getPermisosList()
+	{
+
+		$query = $_SERVER['QUERY_STRING'];
+		$vars = [];
+		foreach (explode('&', $query) as $pair) {
+			list($key, $value) = explode('=', $pair);
+			if('' == trim($value)){
+				continue;
+			}
+			$vars[$key] = urldecode($value);
+		}
+
+		$name = $vars['q'];
+
+		$permisos = Permission::select('id', 'name as text')
+			->where('name', 'LIKE', '%'. $name .'%')->get();
+		return [
+			'results' => $permisos
+		];
+	}
+
+	/**
+	 * Listado de permisos relacionados a rol
+	 * /permisos/query/permisos-relacionados
+	 * @param $id
+	 * @return array
+	 */
+	public function getPermisosRelacionados($id)
+	{
+		$query = $_SERVER['QUERY_STRING'];
+		$vars = [];
+		foreach (explode('&', $query) as $pair) {
+			list($key, $value) = explode('=', $pair);
+			if('' == trim($value)){
+				continue;
+			}
+			$vars[$key] = urldecode($value);
+		}
+
+		$name = $vars['q'];
+
+		$permisos = Permission::select('id', 'name as text')
+			->where('text', 'LIKE', '%'. $name .'%');
+		return [
+			'results' => $permisos
+		];
+	}
 }
+

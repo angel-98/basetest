@@ -10,7 +10,6 @@
 	<div class="row">
 		<div class="col-md-7">
 			@include('roles.edit._form')
-			<hr />
 			<div class="col-md-1 col-md-offset-11 col-sm-12 text-left">
 				<a class="fbtn fbtn-red left" data-toggle="modal" title="Eliminar rol" href="#modal-delete"><span class="icon">delete</span></a>
 			</div>
@@ -23,4 +22,9 @@
 
 @section('modal')
 	@include('roles.edit._modal-delete')
+@stop
+
+
+@section('post-script')
+	<script src="/js/roles-edit.js"></script>
 @stop

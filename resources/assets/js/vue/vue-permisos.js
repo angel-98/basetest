@@ -6,7 +6,6 @@ var v = new Vue({
     ready: function(){
         this.getItems(1);
     },
-
     data:{
         rows: [],
         currentPage: 0,

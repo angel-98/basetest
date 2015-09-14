@@ -29,15 +29,22 @@
 				</div>
 			</div>
 
-		</div>
+			<div class="col-sm-12 col-md-8">
+				<label for="roles-permisos" class="form-control">Permisos</label>
+				<select id="roles-permisos" class="form" name="permisos[]" multiple>
+					@foreach($roles->permissions as $permisos)
+						<option selected value="{{ $permisos->id }}">{{ $permisos->name }}</option>
+					@endforeach
+				</select>
+			</div>
 
+		</div>
+		<hr />
 		<div class="row">
 			<p class="text-left">
 				<button type="submit"  class="btn btn-blue">Save change</button>
 				<a class="btn btn-flat btn-alt" href="/roles">Cancel</a>
 			</p>
 		</div>
-
 	</form>
-
 </fieldset>
