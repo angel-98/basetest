@@ -10,7 +10,7 @@
 
 @section('content')
 	<fildset>
-		<form method="post"  action="{{ action('UserController@update', $usuario->id)}}">
+		<form method="post"  action="{{ action('UserController@update', $usuario->id)}}" enctype="multipart/form-data">
 			{!! csrf_field() !!}
 			<input name="_method" type="hidden" value="PUT">
 			<div class="form-group">
