@@ -21,7 +21,7 @@ elixir(function(mix) {
     mix.scripts(['vue/vue.min.js', 'vue/vue-resource.min.js', 'vue/vue-usuarios.js'], 'public/js/vue-usuarios.js');
     mix.scripts(['select2.full.min.js', 'roles-edit.js'], 'public/js/roles-edit.js');
     mix.scripts(['select2.full.min.js', 'jquery.cleditor.min.js', 'user-edit.js'], 'public/js/user-edit.js');
-    mix.scripts(['amchart/amcharts.js', 'amchart/pie.js', 'user.js'], 'public/js/user.js');
+    mix.scripts(['highcharts/highcharts.js', 'highcharts/highcharts-more.js', 'highcharts/modules/exporting.js', 'user.js'], 'public/js/user.js');
 
 });
 
