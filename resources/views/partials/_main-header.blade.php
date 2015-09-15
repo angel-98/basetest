@@ -15,12 +15,12 @@
 			@if (! Auth::check())
 				<a data-toggle="menu" href="#profile">
 					<span class="access-hide">login</span>
-					<span class="icon icon-3x">account_box</span>
+					<span class="icon icon-3x hidden-print">account_box</span>
 				</a>
 			@else
 			<a data-toggle="menu" href="#profile">
 				<span class="access-hide">{{ Auth::user()->name }}</span>
-				<span class="icon icon-3x">face</span>
+				<span class="icon icon-3x hidden-print">face</span>
 			</a>
 		</li>
 		@endif
