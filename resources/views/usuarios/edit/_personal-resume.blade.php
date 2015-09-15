@@ -5,7 +5,7 @@
 	</div>
 
 	<div class="col-sm-12">
-		<textarea class="" id="resume" name="label">
+		<textarea class="" id="resume" name="resume">
 			{{ $usuario->profile->resume }}
 		</textarea>
 	</div>
