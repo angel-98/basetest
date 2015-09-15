@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UsersRequest;
 use App\Profile;
 use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
+use Intervention\Image\Facades\Image;
 
 class UserController extends Controller
 {
@@ -96,7 +99,72 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+		// seleccionar la informacion de usuario
+		$user = User::findOrFail($id);
+
+		// -- agregar logica de salvado de password
+		if(isset($request['password'])){
+			$iuser = [
+				'name' => $request->input('name'),
+				'email' => $request->input('email'),
+				'password' => $request->input('password')
+			];
+		} else {
+			$iuser = [
+				'name' => $request->input('name'),
+				'email' => $request->input('email')
+			];
+		}
+
+		// Seleccionar la informacion de perfil
+		$profile = Profile::where('user_id', '=', $id);
+
+		// -- agregar logica de salvado de avatar
+		if(isset($request['avatar'])){
+
+			$file = $request->file('avatar');
+			$newfilename = $request->file('avatar')->getClientOriginalName();
+			$file->move('images/users', $newfilename);
+
+			// open an image file
+			//$img = Image::make('images/users', $newfilename);
+
+			// now you are able to resize the instance
+			//$img->resize(320, 240);
+
+			// finally we save the image as a new file
+			//$img->save('images/users', $newfilename);
+
+
+			$iprofile = [
+				'avatar'	=> $newfilename,
+				'label'		=> $request->input('label'),
+				'resume'	=> $request->input('resume'),
+				'github'	=> $request->input('github'),
+				'facebook'	=> $request->input('facebook'),
+				'twitter'	=> $request->input('twitter'),
+				'phone'		=> $request->input('phone'),
+				'mobile'	=> $request->input('mobile')
+			];
+
+		} else {
+
+			$iprofile = [
+				'label'		=> $request->input('label'),
+				'resume'	=> $request->input('resume'),
+				'github'	=> $request->input('github'),
+				'facebook'	=> $request->input('facebook'),
+				'twitter'	=> $request->input('twitter'),
+				'phone'		=> $request->input('phone'),
+				'mobile'	=> $request->input('mobile')
+			];
+
+		}
+
+		$user->update($iuser);
+		$profile->update($iprofile);
+
+		return redirect('usuarios/' . $user->slug);
     }
 
     /**
