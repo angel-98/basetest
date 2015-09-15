@@ -6,7 +6,7 @@
 			<input id="input-file" name="avatar" type="file">
 		</div>
 		<div class="col-sm-12">
-			<img src="/images/users/{{ $usuario->profile->avatar }}" alt=" $usuario->id"/>
+			<img class="img-responsive img-thumbnail" src="/images/users/{{ $usuario->profile->avatar }}" alt=" $usuario->id"/>
 		</div>
 	</div>
 
