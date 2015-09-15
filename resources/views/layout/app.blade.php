@@ -49,7 +49,7 @@
 
 	<div class="container">
 		<div class="row">
-			<ol class="breadcrumb">
+			<ol class="breadcrumb hidden-print">
 				@yield('breadcrumb')
 			</ol>
 		</div>
