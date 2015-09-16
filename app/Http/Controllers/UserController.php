@@ -20,8 +20,8 @@ class UserController extends Controller
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth');
-		$this->middleware('active');
+		$this->middleware('auth', ['except' => ['show']]);
+		$this->middleware('active', ['except' => ['show']]);
 	}
 
     /**
@@ -103,18 +103,14 @@ class UserController extends Controller
 		$user = User::findOrFail($id);
 
 		// -- agregar logica de salvado de password
-		if(isset($request['password'])){
-			$iuser = [
-				'name' => $request->input('name'),
-				'email' => $request->input('email'),
-				'password' => $request->input('password')
-			];
-		} else {
-			$iuser = [
-				'name' => $request->input('name'),
-				'email' => $request->input('email')
-			];
+		if($request->input('password') != null){
+			$iuser = ['password' => $request->input('password')];
 		}
+
+		$iuser = [
+			'name' => $request->input('name'),
+			'email' => $request->input('email')
+		];
 
 		// Seleccionar la informacion de perfil
 		$profile = Profile::where('user_id', '=', $id);

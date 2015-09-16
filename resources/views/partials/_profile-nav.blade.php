@@ -1,5 +1,5 @@
 
-<nav aria-hidden="true" class="menu menu-right" id="profile" tabindex="-1">
+<nav aria-hidden="true" class="menu menu-right hide-on-print" id="profile" tabindex="-1">
 	<div class="menu-scroll">
 
 		@if (Auth::check())

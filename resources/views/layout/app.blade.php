@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>@yield('page-title', 'Basetest')</title>
+	<title>@yield('page-title', 'Devel')</title>
 
 	<link rel="stylesheet" href="{{ URL::asset("css/app.css") }}">
 	@yield('addcss')
@@ -35,12 +35,12 @@
 
 	@include('partials._profile-nav')
 
-	<div class="content">
+	<div class="content hide-on-print">
 		<div class="content-heading">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<h1 class="heading margin-top-no">@yield('page-title', 'Basetest')</h1>
+						<h1 class="heading margin-top-no">@yield('page-title', 'Devel')</h1>
 					</div>
 				</div>
 			</div>

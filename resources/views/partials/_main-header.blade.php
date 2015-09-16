@@ -1,4 +1,4 @@
-<header class="header header-transparent header-waterfall">
+<header class="header header-transparent header-waterfall hidden-print">
 	<ul class="nav nav-list pull-left">
 		<li>
 			<a data-toggle="menu" href="#menu">
@@ -7,7 +7,7 @@
 		</li>
 	</ul>
 
-	<a class="header-logo margin-left-no" href="/">BaseTest</a>
+	<a class="header-logo margin-left-no" href="/">Devel</a>
 
 	<!-- Profile -->
 	<ul class="nav nav-list pull-right">
