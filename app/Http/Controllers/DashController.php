@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 
 class DashController extends Controller
@@ -31,6 +32,9 @@ class DashController extends Controller
 
 	public  function unauthorize()
 	{
+		if(Auth::user()->estado == 1){
+			return redirect('/');
+		}
 		return View('dash.unauthorize');
 	}
 }
