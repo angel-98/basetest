@@ -2,6 +2,33 @@
 
 Sistema de autentificación de usuarios, Roles y permisos
 
+# Incluye paquetes preconfigurados
+- caffeinated/Shinobi para permisos y roles
+- Iluminate/html para 
+- Cviebrock/eloquent-sluggable para url's amigables (Configurar con Shinobi trail)
+- barryvdh/laravel-dompdf
+
+# Incluye en bower_componets
+- Angular
+- fullCalendar
+- moment
+- select2
+- backbone
+- underscore
+- vue
+- jquery.ui
+
+- materialize
+- material
+- foundation
+- bootstrap3
+
+# To-do
+- Metodos asincronicos en el fomularios de registro
+- Probar el sistema de password-reset
+- Limpiar la vista de perfiles
+- Configurar correctamente el sistema de permisos
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
