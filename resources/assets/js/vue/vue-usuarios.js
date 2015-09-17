@@ -45,7 +45,7 @@ Vue.directive('roles', {
         // don't forget to teardown listeners and stuff.
         $(this.el).off().select2('destroy')
     }
-})
+});
 
 var v = new Vue({
     el:'#usuarios',
@@ -133,7 +133,7 @@ var v = new Vue({
 
             this.$http.post('/usuarios/roles/' + user.id, user).success(function (data, status, request) {
                 $('body').toast({
-                    content: 'El rol a sido registrado exitosamente!!'
+                    content: 'El rol a sido asignado exitosamente!!'
                 });
                 this.getItems(1);
             }).error(function (data, status, request) {
@@ -175,7 +175,7 @@ var v = new Vue({
 
             this.$http.post('/usuarios/query/user-estado/' + user.id, user).success(function (data, status, request) {
                 $('body').toast({
-                    content: 'El rol a sido registrado exitosamente!!'
+                    content: 'El usuario a sido modificado exitosamente!!'
                 });
                 $('#modal-status').modal('hide');
                 this.getItems(1);
@@ -201,7 +201,7 @@ var v = new Vue({
             var user = this.user;
             this.$http.delete('/usuarios/' + user.id, user).success(function (data, status, request) {
                 $('body').toast({
-                    content: 'El rol a sido eliminado correctamente !!'
+                    content: 'El usuario a sido eliminado correctamente !!'
                 });
                 $('#modal-delete').modal('hide');
                 this.getItems(1);
