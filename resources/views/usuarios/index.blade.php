@@ -80,8 +80,6 @@
 			</div>
 		</div>
 	</div>
-
-	@include('partials._vue-data')
 @stop
 
 @section('modal')
