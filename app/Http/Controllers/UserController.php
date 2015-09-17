@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UsersRequest;
 use App\Profile;
 use App\User;
+use Caffeinated\Shinobi\Models\Role;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -31,7 +32,8 @@ class UserController extends Controller
      */
     public function index()
     {
-		return View('usuarios.index');
+		$roles = Role::all();
+		return View('usuarios.index', compact('roles'));
     }
 
     /**
@@ -104,13 +106,17 @@ class UserController extends Controller
 
 		// -- agregar logica de salvado de password
 		if($request->input('password') != null){
-			$iuser = ['password' => $request->input('password')];
+			$iuser = [
+				'password' => $request->input('password'),
+				'name' => $request->input('name'),
+				'email' => $request->input('email')
+			];
+		} else {
+			$iuser = [
+				'name' => $request->input('name'),
+				'email' => $request->input('email')
+			];
 		}
-
-		$iuser = [
-			'name' => $request->input('name'),
-			'email' => $request->input('email')
-		];
 
 		// Seleccionar la informacion de perfil
 		$profile = Profile::where('user_id', '=', $id);
@@ -121,16 +127,6 @@ class UserController extends Controller
 			$file = $request->file('avatar');
 			$newfilename = $request->file('avatar')->getClientOriginalName();
 			$file->move('images/users', $newfilename);
-
-			// open an image file
-			//$img = Image::make('images/users', $newfilename);
-
-			// now you are able to resize the instance
-			//$img->resize(320, 240);
-
-			// finally we save the image as a new file
-			//$img->save('images/users', $newfilename);
-
 
 			$iprofile = [
 				'avatar'	=> $newfilename,
@@ -171,6 +167,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+		$user = User::findOrFail($id);
+		$user->delete();
+		return 'done';
     }
 }

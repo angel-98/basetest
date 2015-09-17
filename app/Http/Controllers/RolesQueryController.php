@@ -69,4 +69,14 @@ class RolesQueryController extends Controller
 			];
 		}
 	}
+
+	/**
+	 * regresa un listado de roles con id
+	 * @return mixed
+	 */
+	public function getRolesList()
+	{
+		$roles = Role::select('name as text', 'id')->get();
+		return $roles;
+	}
 }

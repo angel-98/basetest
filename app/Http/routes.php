@@ -51,7 +51,6 @@ Route::get('unauthorize', 'DashController@unauthorize');
 |--------------------------------------------------------------------------
 */
 
-
 /*
 |--------------------------------------------------------------------------
 | Rutas resource de settings y usarios
@@ -70,7 +69,15 @@ Route::resource('usuarios', 'UserController');
 
 /*
 |--------------------------------------------------------------------------
-| Rutas de consulta abiertas
+| Rutas de consulta estricta settings y usarios
+|--------------------------------------------------------------------------
+*/
+
+Route::post('usuarios/roles/{roles}', 'UserRolesController@store');
+
+/*
+|--------------------------------------------------------------------------
+| Rutas de consulta abiertas (casting)
 |--------------------------------------------------------------------------
 */
 

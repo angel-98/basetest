@@ -31,7 +31,7 @@ class UsersQueryController extends Controller
 		$start = ($page > 1) ? ($page * $counter) - $counter : 0;
 		if($search != null){
 
-			$user = User::select(['slug', 'name', 'email', 'estado'])
+			$user = User::select(['id', 'slug', 'name', 'email', 'estado'])
 				->where(function ($query) use ($search) {
 					$query->where('name', 'LIKE', '%'.$search.'%')
 						->orWhere('email', 'LIKE', '%'.$search.'%');
@@ -55,7 +55,8 @@ class UsersQueryController extends Controller
 
 		} else {
 
-			$user = User::select(['slug', 'name', 'email', 'estado'])
+			$user = User::select(['id', 'slug', 'name', 'email', 'estado'])
+				->with('roles')
 				->limit($counter)
 				->offset($start)
 				->get();
@@ -66,5 +67,13 @@ class UsersQueryController extends Controller
 				'items' => $user
 			];
 		}
+	}
+
+	public function postUserEstado(Request $request, $id)
+	{
+		$user = User::findOrFail($id);
+		$user->estado = $request->input('estado');
+		$user->update();
+		return 'done';
 	}
 }
