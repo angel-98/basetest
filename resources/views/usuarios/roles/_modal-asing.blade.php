@@ -42,8 +42,8 @@
 
 					<div class="modal-footer">
 						<p class="text-right">
-							<button type="submit"  class="btn btn-blue">Create</button>
-							<button class="btn btn-flat btn-alt"  data-dismiss="modal" type="button">Close</button></p>
+							<button type="submit"  class="btn btn-blue">Actualizar</button>
+							<button class="btn btn-flat btn-alt"  data-dismiss="modal" type="button">Cerrar</button></p>
 					</div>
 				</div>
 

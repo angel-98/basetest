@@ -14,6 +14,7 @@
 				<form v-on="submit: submitDelete">
 					<button class="btn btn-red" type="submit" >ELIMINAR</button>
 				</form>
+				<br/>
 			</div>
 		</div>
 	</div>

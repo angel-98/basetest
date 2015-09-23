@@ -42,11 +42,6 @@ class UsersQueryController extends Controller
 
 			$total = $user->count();
 
-			/**$total = Role::where(function ($query) use ($search) {
-			$query->where('name', 'LIKE', '%'.$search.'%')
-			->orWhere('description', 'LIKE', '%'.$search.'%');
-			})->count();**/
-
 			return $user = [
 				'itemsPerPage' => $counter,
 				'total' => $total,

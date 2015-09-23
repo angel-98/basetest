@@ -44,7 +44,7 @@
 
 								<ul class="dropdown-menu">
 									<li>
-										<a class="waves-attach waves-effect" href="/usuarios/@{{ row.slug }}"><span class="icon margin-right-sm">face</span>Profile</a>
+										<a class="waves-attach waves-effect" href="/usuarios/@{{ row.slug }}"><span class="icon margin-right-sm">face</span>Perfil</a>
 									</li>
 
 									<li>
@@ -63,7 +63,7 @@
 									</li>
 
 									<li>
-										<a class="waves-attach waves-effect" href="javascript:void(0)" v-on="click: setUserDelete(row)"><span class="icon margin-right-sm">delete</span>delete</a>
+										<a class="waves-attach waves-effect" href="javascript:void(0)" v-on="click: setUserDelete(row)"><span class="icon margin-right-sm">delete</span>Eliminar</a>
 									</li>
 								</ul>
 

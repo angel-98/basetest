@@ -31,6 +31,7 @@
 				<form v-on="submit: submitStatus">
 					<button class="btn" v-class="btn-blue: user.estado === false, btn-red: user.estado === true" type="submit" >@{{ user.msgEstado }}</button>
 				</form>
+				<br>
 			</div>
 		</div>
 	</div>
