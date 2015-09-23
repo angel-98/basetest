@@ -3,12 +3,12 @@
 	<p class="strong">Información General</p>
 	<div class="col-sm-12 col-md-6 form-group-label">
 		<label class="floating-label" for="name">Nombre</label>
-		<input class="form-control" id="name" name="name" value="{{ $usuario->name }}" type="text">
+		<input class="form-control" id="name" name="name" type="text">
 	</div>
 
 	<div class="col-sm-12 col-md-6 form-group-label">
 		<label class="floating-label" for="email">email</label>
-		<input class="form-control" id="email" name="email" value="{{ $usuario->email }}" type="email">
+		<input class="form-control" id="email" name="email" type="email">
 	</div>
 
 </div>

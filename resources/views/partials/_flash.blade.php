@@ -12,7 +12,7 @@
 		<strong>Warning!</strong>
 		<ol>
 			@foreach ($errors->all() as $error)
-				<li><span class="white-text">{{ $error }}</span></li>
+				<li><span class="red-text">{{ $error }}</span></li>
 			@endforeach
 		</ol>
 	</div>

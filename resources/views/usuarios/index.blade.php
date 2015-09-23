@@ -10,10 +10,9 @@
 @stop
 
 @section('content')
-
 	<div class="row">
 		<div class="col-md-1 col-md-offset-11 col-sm-12 text-left">
-			<a class="fbtn fbtn-alt left" data-toggle="modal" title="Nuevo usuario" href="#modal-create"><span class="icon">add</span></a>
+			<a class="fbtn fbtn-alt left" data-toggle="modal" title="Nuevo usuario" href="{{ action('UserController@create') }}"><span class="icon">add</span></a>
 		</div>
 	</div>
 
