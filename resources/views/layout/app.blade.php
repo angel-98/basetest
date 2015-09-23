@@ -27,7 +27,7 @@
 
 <body class="avoid-fout" @yield('v-control', "")>
 
-	<!--include('partials._loader') -->
+	@include('partials._loader')
 
 	@include('partials._main-header')
 
@@ -53,9 +53,13 @@
 				@yield('breadcrumb')
 			</ol>
 		</div>
+
+		<div class="row">
+			@include('partials._flash')
+		</div>
+
 		<div class="row">
 			<div class="col-sm-12">
-				@yield('partials._flash')
 				<section class="content-inner margin-top-no">
 					@yield('content')
 				</section>
