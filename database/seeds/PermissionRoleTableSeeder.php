@@ -16,51 +16,43 @@ class PermissionRoleTableSeeder extends Seeder {
 		\DB::table('permission_role')->insert(array (
 			0 => 
 			array (
-				'id' => 1,
-				'permission_id' => 4,
-				'role_id' => 1,
-				'created_at' => '2015-09-14 15:37:50',
-				'updated_at' => '2015-09-14 15:37:50',
+				'id' => 8,
+				'permission_id' => 8,
+				'role_id' => 2,
+				'created_at' => '2015-09-17 16:19:10',
+				'updated_at' => '2015-09-17 16:19:10',
 			),
 			1 => 
 			array (
-				'id' => 2,
-				'permission_id' => 3,
-				'role_id' => 1,
-				'created_at' => '2015-09-14 15:37:50',
-				'updated_at' => '2015-09-14 15:37:50',
+				'id' => 9,
+				'permission_id' => 8,
+				'role_id' => 3,
+				'created_at' => '2015-09-17 16:19:19',
+				'updated_at' => '2015-09-17 16:19:19',
 			),
 			2 => 
 			array (
-				'id' => 3,
-				'permission_id' => 5,
+				'id' => 11,
+				'permission_id' => 2,
 				'role_id' => 1,
-				'created_at' => '2015-09-14 15:37:50',
-				'updated_at' => '2015-09-14 15:37:50',
+				'created_at' => '2015-09-23 16:14:46',
+				'updated_at' => '2015-09-23 16:14:46',
 			),
 			3 => 
 			array (
-				'id' => 4,
-				'permission_id' => 2,
+				'id' => 12,
+				'permission_id' => 9,
 				'role_id' => 1,
-				'created_at' => '2015-09-14 15:37:50',
-				'updated_at' => '2015-09-14 15:37:50',
+				'created_at' => '2015-09-23 16:14:46',
+				'updated_at' => '2015-09-23 16:14:46',
 			),
 			4 => 
 			array (
-				'id' => 5,
-				'permission_id' => 6,
+				'id' => 14,
+				'permission_id' => 10,
 				'role_id' => 1,
-				'created_at' => '2015-09-14 15:37:50',
-				'updated_at' => '2015-09-14 15:37:50',
-			),
-			5 => 
-			array (
-				'id' => 6,
-				'permission_id' => 7,
-				'role_id' => 1,
-				'created_at' => '2015-09-14 15:37:50',
-				'updated_at' => '2015-09-14 15:37:50',
+				'created_at' => '2015-09-23 18:05:55',
+				'updated_at' => '2015-09-23 18:05:55',
 			),
 		));
 	}

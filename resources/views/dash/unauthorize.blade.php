@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.non-app')
 
 @section('content')
 	<h3 class="text-red">No tienes autorización para ingresar al sistema</h3>

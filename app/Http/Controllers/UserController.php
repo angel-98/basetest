@@ -25,6 +25,7 @@ class UserController extends Controller
 		$this->middleware('active', ['except' => ['show']]);
 		$this->middleware('profilePerms', ['only' => ['edit', 'update']]);
 		$this->middleware('UserPermAccess', ['except' => ['edit', 'update', 'show']]);
+		$this->middleware('AvoidDeleteUser', ['only' => ['destroy']]);
 
 	}
 
@@ -110,7 +111,7 @@ class UserController extends Controller
 		// -- agregar logica de salvado de password
 		if($request->input('password') != null){
 			$iuser = [
-				'password' => $request->input('password'),
+				'password' => bcrypt($request->input('password')),
 				'name' => $request->input('name'),
 				'email' => $request->input('email')
 			];

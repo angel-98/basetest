@@ -2,7 +2,7 @@
 <nav aria-hidden="true" class="menu menu-right hide-on-print" id="profile" tabindex="-1">
 	<div class="menu-scroll">
 
-		@if (Auth::check())
+		@if (Auth::check() && !is_null(Auth::user()->profile))
 			<div class="menu-top">
 				<div class="menu-top-img">
 					<img alt="{{ Auth::user()->name }}" src="{{ asset('images/samples/landscape.jpg') }}" />

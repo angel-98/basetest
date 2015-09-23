@@ -23,8 +23,19 @@ class UsersRequest extends Request
      */
     public function rules()
     {
-        return [
-            'email' => 'required|unique:users'
-        ];
+
+		$create = [
+			'email' => 'required|unique:users'
+		];
+
+		$edit = [
+			'email' => 'required'
+		];
+
+		if($this->method == 'PUT' || $this->method == 'PATH'){
+			return $edit;
+		} else {
+			return $create;
+		}
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -22,12 +23,13 @@ class DashController extends Controller
 
     public function home()
 	{
+
 		return View('dash.home');
 	}
 
 	public function landing()
 	{
-		return View('dash.landing')->with('flash_message', 'hay un error');
+		return View('dash.landing');
 	}
 
 	public  function unauthorize()
