@@ -19,20 +19,7 @@
 
 				<ul class="nav">
 					<li>
-						<a class="waves-attach" href="javascript:void(0)"><span class="icon icon-lg">account_box</span>Configuraciones de perfil</a>
-
-					</li>
-
-					<li>
-						<a class="waves-attach" href="/auth/logout"><span class="icon icon-lg">exit_to_app</span>Logout</a>
-					</li>
-				</ul>
-
-				<!-- Settings, Only authorized users can see this -->
-				<hr />
-				<ul class="nav">
-					<li>
-						<a class="waves-attach" href="javascript:void(0)"><span class="icon icon-lg">settings</span>Configuraciones</a>
+						<a class="waves-attach" href="javascript:void(0)"><span class="icon icon-lg">account_box</span>Configuraciones de usuarios</a>
 						<span class="menu-collapse-toggle collapsed" data-target="#page-settings" data-toggle="collapse"><i class="icon menu-collapse-toggle-close">close</i><i class="icon menu-collapse-toggle-default">add</i></span>
 						<ul class="menu-collapse collapse" id="page-settings">
 							<li>
@@ -45,6 +32,18 @@
 								<a class="waves-attach" href="/permisos">Permisos</a>
 							</li>
 						</ul>
+					</li>
+
+					<li>
+						<a class="waves-attach" href="/auth/logout"><span class="icon icon-lg">exit_to_app</span>Logout</a>
+					</li>
+				</ul>
+
+				<!-- Settings, Only authorized users can see this -->
+				<hr />
+				<ul class="nav">
+					<li>
+						<a class="waves-attach" href="javascript:void(0)"><span class="icon icon-lg">settings</span>Configuraciones</a>
 					</li>
 				</ul>
 				<!-- settings --->
