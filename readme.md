@@ -1,14 +1,15 @@
-## Projecto Base para el inicio rapido de proyectos en Laravel 5.1
-
-Sistema de autentificación de usuarios, Roles y permisos
+## Projecto Base para el inicio rapido de proyectos en Laravel 5.1 (en desarrollo)
+Sistema de autentificación de usuarios, Roles y permisos.
+Como respaldo, la arquitectura de Laravel 5.1 y pensado como un stater point para futuras aplicaciones online o intranet. el esquema de permisos esta preconfigurados y funciona en el frontend con vuejs ademas de estar formateado según las especificaciones de 
+materia desing.
 
 # Incluye paquetes preconfigurados
 - caffeinated/Shinobi para permisos y roles
-- Iluminate/html para 
 - Cviebrock/eloquent-sluggable para url's amigables (Configurar con Shinobi trail)
 - barryvdh/laravel-dompdf
+- Iluminate/html para formularios o etiquetado en blade 
 
-# Incluye en bower_componets
+# Incluye librerias en bower_componets
 - Angular
 - fullCalendar
 - moment
@@ -18,17 +19,28 @@ Sistema de autentificación de usuarios, Roles y permisos
 - vue
 - jquery.ui
 
+ **Los framework frontend estan con sus repectivos archivos SASS completos, para poderlos convinar de ser necesario.
 - materialize
 - material
 - foundation
 - bootstrap3
 
-# To-do
-- Metodos asincronicos en el fomularios de registro
-- Probar el sistema de password-reset
-- Limpiar la vista de perfiles
-- Configurar correctamente el sistema de permisos
+# Instrucciones
+- Haber descargado y configurado **composer**, seria preferible tener un ambiente de trabajo enb vagrant, para ser precisos **Homestead** que esta listo para trabajar con laravel 5.1, tambien configurar nodejs o instalr nvm de preferencia por la cuestion de versiones.
+- Configurar correctamente el archivo .env
+- Correr dentro de la carpeta root $npm install y $bower install para las librerias js y elixir (gulp)
+- Correr las migraciones y los seeds de base de datos en php artisan (el usuario es gbelot2003@hotmail.com y pass admin123)
 
+# Todo
+**- Metodos asincronicos en el fomularios de registro(check)
+**- Configurar correctamente el sistema de permisos(check)
+- mejorar el sistema de seguridad (verificar los formularios correctamente)
+- Probar el sistema de password-reset
+- Limpiar la vista de perfiles(check)
+- revisar los controladores he implementar arquitectura flux donde sea necesario.
+
+** El sistema aun esta en desarrollo, lo voy tenermando en cuanto me va dando timpo de tanto en tanto así que no seas tan exigentes a la hora de revisarlo ;)
+**------------------------------------------------------------------------------------------------------------------------------------------------------------**
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
