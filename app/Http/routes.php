@@ -65,8 +65,6 @@ Route::resource('permisos', 'PermissionController');
 
 Route::resource('roles', 'RolesController');
 
-Route::resource('usuarios', 'UserController');
-
 /*
 |--------------------------------------------------------------------------
 | Rutas de consulta estricta settings y usarios

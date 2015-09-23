@@ -23,6 +23,9 @@ class UserController extends Controller
 	{
 		$this->middleware('auth', ['except' => ['show']]);
 		$this->middleware('active', ['except' => ['show']]);
+		$this->middleware('profilePerms', ['only' => ['edit', 'update']]);
+		$this->middleware('UserPermAccess', ['except' => ['edit', 'update', 'show']]);
+
 	}
 
     /**
@@ -43,7 +46,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return View('usuarios.create');
     }
 
     /**
@@ -52,7 +55,7 @@ class UserController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(UsersRequest $request)
     {
         //
     }
@@ -86,9 +89,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($slug)
+    public function edit($id)
     {
-		$usuario = User::findBySlug($slug);
+		$usuario = User::findOrFail($id);
 		return View('usuarios.edit', compact('usuario'));
     }
 
@@ -99,7 +102,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(UsersRequest $request, $id)
     {
 		// seleccionar la informacion de usuario
 		$user = User::findOrFail($id);

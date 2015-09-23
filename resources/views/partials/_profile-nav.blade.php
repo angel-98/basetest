@@ -18,6 +18,8 @@
 			<div class="menu-content">
 
 				<ul class="nav">
+
+					@if(Auth::user()->can('config-menu-user-access'))
 					<li>
 						<a class="waves-attach" href="javascript:void(0)"><span class="icon icon-lg">account_box</span>Configuraciones de usuarios</a>
 						<span class="menu-collapse-toggle collapsed" data-target="#page-settings" data-toggle="collapse"><i class="icon menu-collapse-toggle-close">close</i><i class="icon menu-collapse-toggle-default">add</i></span>
@@ -33,6 +35,7 @@
 							</li>
 						</ul>
 					</li>
+					@endif
 
 					<li>
 						<a class="waves-attach" href="/auth/logout"><span class="icon icon-lg">exit_to_app</span>Logout</a>
@@ -42,9 +45,11 @@
 				<!-- Settings, Only authorized users can see this -->
 				<hr />
 				<ul class="nav">
+					@if(Auth::user()->can('config-menu-access'))
 					<li>
 						<a class="waves-attach" href="javascript:void(0)"><span class="icon icon-lg">settings</span>Configuraciones</a>
 					</li>
+					@endif
 				</ul>
 				<!-- settings --->
 

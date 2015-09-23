@@ -15,7 +15,7 @@
 						<img style="margin: 0 auto;" class="img-responsive img-thumbnail text-center" src="/images/users/{{ $usuario->profile->avatar }}" alt="{{ $usuario->name }}"/>
 					</p>
 					@if(Auth::check())
-					<p class="text-center"><a href="/usuarios/{{ $usuario->slug }}/edit">editar perfil</a></p>
+					<p class="text-center"><a href="/usuarios/{{ $usuario->id }}/edit">editar perfil</a></p>
 					@endif
 					<p class="text-center">{{ $usuario->profile->label }}</p>
 				</div>
