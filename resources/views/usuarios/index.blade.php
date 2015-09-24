@@ -12,7 +12,7 @@
 @section('content')
 	<div class="row">
 		<div class="col-md-1 col-md-offset-11 col-sm-12 text-left">
-			<a class="fbtn fbtn-alt left" data-toggle="modal" title="Nuevo usuario" href="{{ action('UserController@create') }}"><span class="icon">add</span></a>
+			<a class="fbtn fbtn-alt left" data-toggle="modal" title="Nuevo usuario" href="{{ action('UserController@create') }}"><span class="wicon wicon-pencil2"></span></a>
 		</div>
 	</div>
 
@@ -29,7 +29,7 @@
 							 avatar-blue : row.estado != false,
 							 avatar-red : row.estado != true
 						">
-							<span class="icon">@{{ estadoTrans(row.estado) }}</span>
+							<span class="icon @{{ estadoTrans(row.estado) }}"></span>
 						</div>
 					</div>
 

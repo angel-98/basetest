@@ -10611,13 +10611,13 @@ body {
   font-size: 8.5pt; }
 
 @font-face {
-  font-family: 'develhn';
-  src: url("../font/devel-icon/develhn1.eot?-wolebl");
-  src: url("../font/devel-icon/develhn1.eot?#iefix-wolebl") format("embedded-opentype"), url("../font/devel-icon/develhn1.ttf?-wolebl") format("truetype"), url("../font/devel-icon/develhn1.woff?-wolebl") format("woff"), url("../font/devel-icon/develhn1.svg?-wolebl#develhn") format("svg");
+  font-family: 'develhn1';
+  src: url("http://basetest.app/font/devel-icon/develhn1.eot?-wolebl");
+  src: url("http://basetest.app/font/devel-icon/develhn1.eot?#iefix-wolebl") format("embedded-opentype"), url("http://basetest.app/font/devel-icon/develhn1.ttf?-wolebl") format("truetype"), url("http://basetest.app/font/devel-icon/develhn1.woff?-wolebl") format("woff"), url("http://basetest.app/font/devel-icon/develhn1.svg?-wolebl#develhn") format("svg");
   font-weight: normal;
   font-style: normal; }
 
-.icon, .breadcrumb > li + li:before {
+.wicon {
   font-family: 'develhn1';
   speak: none;
   font-style: normal;
@@ -10629,259 +10629,259 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon-home:before {
+.wicon-home:before {
   content: "\e900"; }
 
-.icon-pencil2:before {
+.wicon-pencil2:before {
   content: "\e906"; }
 
-.icon-bullhorn:before {
+.wicon-bullhorn:before {
   content: "\e91a"; }
 
-.icon-file-text:before {
+.wicon-file-text:before {
   content: "\e922"; }
 
-.icon-profile:before {
+.wicon-profile:before {
   content: "\e923"; }
 
-.icon-folder:before {
+.wicon-folder:before {
   content: "\e92f"; }
 
-.icon-coin-dollar:before {
+.wicon-coin-dollar:before {
   content: "\e93b"; }
 
-.icon-coin-euro:before {
+.wicon-coin-euro:before {
   content: "\e93c"; }
 
-.icon-phone:before {
+.wicon-phone:before {
   content: "\e942"; }
 
-.icon-address-book:before {
+.wicon-address-book:before {
   content: "\e944"; }
 
-.icon-envelop:before {
+.wicon-envelop:before {
   content: "\e945"; }
 
-.icon-pushpin:before {
+.wicon-pushpin:before {
   content: "\e946"; }
 
-.icon-location:before {
+.wicon-location:before {
   content: "\e947"; }
 
-.icon-printer:before {
+.wicon-printer:before {
   content: "\e954"; }
 
-.icon-floppy-disk:before {
+.wicon-floppy-disk:before {
   content: "\e962"; }
 
-.icon-bubble:before {
+.wicon-bubble:before {
   content: "\e96b"; }
 
-.icon-bubbles:before {
+.wicon-bubbles:before {
   content: "\e96c"; }
 
-.icon-user:before {
+.wicon-user:before {
   content: "\e971"; }
 
-.icon-user-plus:before {
+.wicon-user-plus:before {
   content: "\e973"; }
 
-.icon-user-minus:before {
+.wicon-user-minus:before {
   content: "\e974"; }
 
-.icon-user-check:before {
+.wicon-user-check:before {
   content: "\e975"; }
 
-.icon-user-tie:before {
+.wicon-user-tie:before {
   content: "\e976"; }
 
-.icon-quotes-left:before {
+.wicon-quotes-left:before {
   content: "\e97e"; }
 
-.icon-spinner:before {
+.wicon-spinner:before {
   content: "\e97b"; }
 
-.icon-key2:before {
+.wicon-key2:before {
   content: "\e98e"; }
 
-.icon-cog:before {
+.wicon-cog:before {
   content: "\e994"; }
 
-.icon-cogs:before {
+.wicon-cogs:before {
   content: "\e995"; }
 
-.icon-hammer:before {
+.wicon-hammer:before {
   content: "\e996"; }
 
-.icon-bug:before {
+.wicon-bug:before {
   content: "\e999"; }
 
-.icon-pie-chart:before {
+.wicon-pie-chart:before {
   content: "\e99a"; }
 
-.icon-stats-dots:before {
+.wicon-stats-dots:before {
   content: "\e99b"; }
 
-.icon-stats-bars:before {
+.wicon-stats-bars:before {
   content: "\e99c"; }
 
-.icon-stats-bars2:before {
+.wicon-stats-bars2:before {
   content: "\e99d"; }
 
-.icon-bin:before {
+.wicon-bin:before {
   content: "\e9ac"; }
 
-.icon-clipboard:before {
+.wicon-clipboard:before {
   content: "\e9b8"; }
 
-.icon-list:before {
+.wicon-list:before {
   content: "\e9ba"; }
 
-.icon-download2:before {
+.wicon-download2:before {
   content: "\e9c5"; }
 
-.icon-upload2:before {
+.wicon-upload2:before {
   content: "\e9c6"; }
 
-.icon-link:before {
+.wicon-link:before {
   content: "\e9cb"; }
 
-.icon-happy:before {
+.wicon-happy:before {
   content: "\e9e0"; }
 
-.icon-tongue:before {
+.wicon-tongue:before {
   content: "\e9e3"; }
 
-.icon-sad:before {
+.wicon-sad:before {
   content: "\e9e5"; }
 
-.icon-wink:before {
+.wicon-wink:before {
   content: "\e9e7"; }
 
-.icon-grin:before {
+.wicon-grin:before {
   content: "\e9e9"; }
 
-.icon-cool:before {
+.wicon-cool:before {
   content: "\e9eb"; }
 
-.icon-wondering:before {
+.wicon-wondering:before {
   content: "\e9fb"; }
 
-.icon-warning:before {
+.wicon-warning:before {
   content: "\ea07"; }
 
-.icon-question:before {
+.wicon-question:before {
   content: "\ea09"; }
 
-.icon-plus:before {
+.wicon-plus:before {
   content: "\ea0a"; }
 
-.icon-minus:before {
+.wicon-minus:before {
   content: "\ea0b"; }
 
-.icon-cross:before {
+.wicon-cross:before {
   content: "\ea0f"; }
 
-.icon-checkmark:before {
+.wicon-checkmark:before {
   content: "\ea10"; }
 
-.icon-exit:before {
+.wicon-exit:before {
   content: "\ea14"; }
 
-.icon-arrow-up-left:before {
+.wicon-arrow-up-left:before {
   content: "\ea31"; }
 
-.icon-arrow-up:before {
+.wicon-arrow-up:before {
   content: "\ea32"; }
 
-.icon-arrow-up-right:before {
+.wicon-arrow-up-right:before {
   content: "\ea33"; }
 
-.icon-arrow-right:before {
+.wicon-arrow-right:before {
   content: "\ea34"; }
 
-.icon-arrow-down-right:before {
+.wicon-arrow-down-right:before {
   content: "\ea35"; }
 
-.icon-arrow-down:before {
+.wicon-arrow-down:before {
   content: "\ea36"; }
 
-.icon-arrow-down-left:before {
+.wicon-arrow-down-left:before {
   content: "\ea37"; }
 
-.icon-circle-up:before {
+.wicon-circle-up:before {
   content: "\ea41"; }
 
-.icon-circle-right:before {
+.wicon-circle-right:before {
   content: "\ea42"; }
 
-.icon-circle-down:before {
+.wicon-circle-down:before {
   content: "\ea43"; }
 
-.icon-circle-left:before {
+.wicon-circle-left:before {
   content: "\ea44"; }
 
-.icon-ctrl:before {
+.wicon-ctrl:before {
   content: "\ea50"; }
 
-.icon-google-plus:before {
+.wicon-google-plus:before {
   content: "\ea89"; }
 
-.icon-google-drive:before {
+.wicon-google-drive:before {
   content: "\ea8b"; }
 
-.icon-facebook:before {
+.wicon-facebook:before {
   content: "\ea8e"; }
 
-.icon-twitter:before {
+.wicon-twitter:before {
   content: "\ea93"; }
 
-.icon-feed:before {
+.wicon-feed:before {
   content: "\ea94"; }
 
-.icon-youtube4:before {
+.wicon-youtube4:before {
   content: "\ea9a"; }
 
-.icon-vimeo:before {
+.wicon-vimeo:before {
   content: "\ea9e"; }
 
-.icon-flickr:before {
+.wicon-flickr:before {
   content: "\eaa3"; }
 
-.icon-github:before {
+.wicon-github:before {
   content: "\eab1"; }
 
-.icon-tux:before {
+.wicon-tux:before {
   content: "\eabe"; }
 
-.icon-skype:before {
+.wicon-skype:before {
   content: "\eac6"; }
 
-.icon-pinterest:before {
+.wicon-pinterest:before {
   content: "\ead0"; }
 
-.icon-file-pdf:before {
+.wicon-file-pdf:before {
   content: "\eada"; }
 
-.icon-file-openoffice:before {
+.wicon-file-openoffice:before {
   content: "\eadb"; }
 
-.icon-file-word:before {
+.wicon-file-word:before {
   content: "\eadc"; }
 
-.icon-file-excel:before {
+.wicon-file-excel:before {
   content: "\eadd"; }
 
-.icon-html5:before {
+.wicon-html5:before {
   content: "\eadf"; }
 
-.icon-css3:before {
+.wicon-css3:before {
   content: "\eae1"; }
 
-.icon-git:before {
+.wicon-git:before {
   content: "\eae2"; }
 
-.icon-calendar2:before {
+.wicon-calendar2:before {
   content: "\e602"; }
 
 .nav > li > a:hover, .nav > li > a:focus {

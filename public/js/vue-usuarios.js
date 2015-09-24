@@ -116,9 +116,9 @@ var v = new Vue({
 
             var state = '';
             if (estado === true) {
-                state = 'person';
+                state = 'wicon wicon-user';
             } else {
-                state = 'cancel';
+                state = 'wicon wicon-sad';
             }
             return state;
         },
