@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\RolesRequest;
-use Caffeinated\Shinobi\Models\Permission;
-use Caffeinated\Shinobi\Models\Role;
+use App\Permission;
+use App\Role;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;

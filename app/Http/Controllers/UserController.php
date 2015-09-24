@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UsersRequest;
 use App\Profile;
 use App\User;
-use Caffeinated\Shinobi\Models\Role;
+use App\Role;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;

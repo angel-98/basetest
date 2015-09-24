@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PermissionsRequest;
-use Caffeinated\Shinobi\Models\Permission;
+use App\Permission;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
