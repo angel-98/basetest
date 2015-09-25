@@ -15,9 +15,9 @@ class UsersQueryController extends Controller
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth');
-		$this->middleware('active');
-		$this->middleware('UserPermAccess');
+		$this->middleware('auth', ['except' => ['getUserExist']]);
+		$this->middleware('active', ['except' => ['getUserExist']]);
+		$this->middleware('UserPermAccess', ['except' => ['getUserExist']]);
 		$this->middleware('AvoidDeleteUser', ['only' => ['postUserEstado']]);
 	}
 
@@ -72,5 +72,17 @@ class UsersQueryController extends Controller
 		$user->estado = $request->input('estado');
 		$user->update();
 		return 'done';
+	}
+
+	public function getUserExist($email)
+	{
+		$user = User::where('email', '=', $email)->first();
+		if ($user === null) {
+			return redirect('404');
+		}
+		return $user = array(
+			'profile' => $user->profile->avatar,
+			'name' => $user->name
+		);
 	}
 }

@@ -27,7 +27,7 @@
 
 <body class="avoid-fout" @yield('v-control', "")>
 
-	<!--include('partials._loader')-->
+	@include('partials._loader')
 
 	@include('partials._main-header')
 

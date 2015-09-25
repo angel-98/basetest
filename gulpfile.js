@@ -17,6 +17,7 @@ elixir(function(mix) {
     // Librerias de uso especifico en la aplicación
     mix.scripts(['jquery2.1.4.min.js', 'base.js', 'init.js'], 'public/js/app.js');
     mix.scripts(['vue/vue.min.js', 'vue/vue-resource.min.js', 'vue/vue-roles.js'], 'public/js/vue-roles.js');
+    mix.scripts(['vue/vue.min.js', 'vue/vue-resource.min.js', 'vue/vue-login.js'], 'public/js/vue-login.js');
     mix.scripts(['vue/vue.min.js', 'vue/vue-resource.min.js', 'vue/vue-permisos.js'], 'public/js/vue-permisos.js');
     mix.scripts(['select2.full.min.js', 'vue/vue.min.js', 'vue/vue-resource.min.js', 'vue/vue-usuarios.js'], 'public/js/vue-usuarios.js');
     mix.scripts(['select2.full.min.js', 'roles-edit.js'], 'public/js/roles-edit.js');

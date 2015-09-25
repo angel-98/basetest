@@ -1,5 +1,6 @@
 @extends('layout.app')
 @section('page-title', 'Login')
+@section('v-control', 'id="login"')
 <!-- resources/views/auth/login.blade.php -->
 @section('content')
 	<div class="row">
@@ -16,7 +17,8 @@
 							<div class="card-inner">
 								<p class="text-center">
 												<span class="avatar avatar-inline avatar-lg">
-													<img alt="Login" src="../images/users/avatar-001.jpg">
+													<img alt="Login" src="../images/users/avatar-001.jpg" v-if="exist === false">
+													<img alt="Login" src="../images/users/@{{ rows.profile }}" v-if="exist === !false">
 												</span>
 								</p>
 								<form method="POST" action="/auth/login">
@@ -25,7 +27,7 @@
 										<div class="row">
 											<div class="col-md-10 col-md-push-1">
 												<label class="floating-label" for="email">E-mail</label>
-												<input class="form-control" id="email" type="email" name="email" value="{{ old('email') }}">
+												<input class="form-control" id="email" type="email" name="email" value="{{ old('email') }}" v-model="email" v-on="keyup : searchEmail">
 											</div>
 										</div>
 									</div>
@@ -33,7 +35,7 @@
 										<div class="row">
 											<div class="col-md-10 col-md-push-1">
 												<label class="floating-label" for="login-password">Password</label>
-												<input class="form-control" id="password" type="password" name="password" >
+												<input class="form-control" id="password" type="password" name="password" v-model="pass" v-attr="disabled: exist === false">
 											</div>
 										</div>
 									</div>
@@ -41,7 +43,7 @@
 									<div class="form-group">
 										<div class="row">
 											<div class="col-md-10 col-md-push-1">
-												<button class="btn btn-block waves-attach waves-button">Login</button>
+												<button class="btn btn-block waves-attach waves-button" v-attr="disabled: ! pass">Login</button>
 											</div>
 										</div>
 									</div>
@@ -69,4 +71,9 @@
 			</section>
 		</div>
 	</div>
+	@include('partials._vue-data')
+@stop
+
+@section('post-script')
+	<script src="/js/vue-login.js"></script>
 @stop
