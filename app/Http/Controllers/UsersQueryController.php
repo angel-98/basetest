@@ -18,6 +18,7 @@ class UsersQueryController extends Controller
 		$this->middleware('auth');
 		$this->middleware('active');
 		$this->middleware('UserPermAccess');
+		$this->middleware('AvoidDeleteUser', ['only' => ['postUserEstado']]);
 	}
 
 	/**
