@@ -61,12 +61,12 @@ class UserController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param $slug
+	 * @return \Illuminate\Http\RedirectResponse|View
+	 */
     public function show($slug)
     {
 		$usuario = User::findBySlug($slug);
@@ -96,13 +96,13 @@ class UserController extends Controller
 		return View('usuarios.edit', compact('usuario'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  Request  $request
-     * @param  int  $id
-     * @return Response
-     */
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param UsersRequest $request
+	 * @param $id
+	 * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+	 */
     public function update(UsersRequest $request, $id)
     {
 
