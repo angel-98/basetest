@@ -24,18 +24,18 @@ class UsersRequest extends Request
     public function rules()
     {
 
-		$create = [
-			'email' => 'required|unique:users'
+		$rules = [
+			'email' 	=> 'required|email|unique:users,id,:id',
+			'name'		=> 'required||max:255',
+			'password' 	=> 'confirmed|min:6',
+			'github'	=> 'url',
+			'facebook'	=> 'url',
+			'twitter'	=> 'url',
+			'phone'		=> 'string',
+			'mobile'	=> 'string',
+			'avatar'	=> 'image'
 		];
 
-		$edit = [
-			'email' => 'required'
-		];
-
-		if($this->method == 'PUT' || $this->method == 'PATH'){
-			return $edit;
-		} else {
-			return $create;
-		}
+		return $rules;
     }
 }
