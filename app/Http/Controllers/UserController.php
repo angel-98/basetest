@@ -8,13 +8,11 @@ use App\Http\Requests\UsersRequest;
 use App\Profile;
 use App\User;
 use App\Role;
-use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
-use Intervention\Image\Facades\Image;
 
 class UserController extends Controller
 {
@@ -51,12 +49,12 @@ class UserController extends Controller
         return View('usuarios.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
+	/**
+	 * Store a newly created resource in storage.
+	 *
+	 * @param UsersRequest $request
+	 * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+	 */
     public function store(UsersRequest $request)
     {
 		event(new UserWasCreated($request->all()));
