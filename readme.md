@@ -32,14 +32,15 @@ materia desing.
 - Correr las migraciones y los seeds de base de datos en php artisan (el usuario es gbelot2003@hotmail.com y pass admin123)
 
 # Todo
-**- Metodos asincronicos en el fomularios de registro(check)
-**- Configurar correctamente el sistema de permisos(check)
+**- Metodos asincronicos en el fomularios de registro(check)**
+**- Configurar correctamente el sistema de permisos(check)**
+**- revisar los controladores he implementar arquitectura flux donde sea necesario.(check)**
 - mejorar el sistema de seguridad (verificar los formularios correctamente)
+- Crear modulo de skills en perfiles
 - Probar el sistema de password-reset
-- Limpiar la vista de perfiles(check)
-- revisar los controladores he implementar arquitectura flux donde sea necesario.
 
-** El sistema aun esta en desarrollo, lo voy tenermando en cuanto me va dando timpo de tanto en tanto así que no seas tan exigentes a la hora de revisarlo ;)
+
+** El sistema aun esta en desarrollo, lo voy tenermando en cuanto me va dando timpo de tanto en tanto así que no seas tan exigentes a la hora de revisarlo ;)**
 **------------------------------------------------------------------------------------------------------------------------------------------------------------**
 ## Laravel PHP Framework
 
