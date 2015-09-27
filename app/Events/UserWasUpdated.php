@@ -17,6 +17,8 @@ class UserWasUpdated extends Event
 	public $user;
 	public $avatar;
 	public $profile;
+	public $iuser;
+	public $iprofile;
 
 	/**
 	 * Create a new event instance.

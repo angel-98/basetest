@@ -15,6 +15,7 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         'App\Events\UserWasUpdated' => [
             'App\Listeners\UserUploadAvatar',
+            'App\Listeners\UserCreatingDataVariables',
             'App\Listeners\UserUpdateProfile'
         ],
     ];
