@@ -40,8 +40,8 @@ materia desing.
 - Probar el sistema de password-reset
 
 
-** El sistema aun esta en desarrollo, lo voy tenermando en cuanto me va dando timpo de tanto en tanto así que no seas tan exigentes a la hora de revisarlo ;)**
-**------------------------------------------------------------------------------------------------------------------------------------------------------------**
+**El sistema aun esta en desarrollo, lo voy tenermando en cuanto me va dando timpo de tanto en tanto así que no seas tan exigentes a la hora de revisarlo ;)**
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
