@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
+use App\User;
 
 class UsersRequest extends Request
 {
@@ -16,26 +17,44 @@ class UsersRequest extends Request
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
+	/**
+	 * Get the validation rules that apply to the request.
+	 *
+	 * @param IncomingRequest $request
+	 * @return array
+	 */
     public function rules()
     {
+		if($this->method == 'PUT' || $this->method == 'PATCH'){
 
-		$rules = [
-			'email' 	=> 'required|email|unique:users,id,:id',
-			'name'		=> 'required||max:255',
-			'password' 	=> 'confirmed|min:6',
-			'github'	=> 'url',
-			'facebook'	=> 'url',
-			'twitter'	=> 'url',
-			'phone'		=> 'string',
-			'mobile'	=> 'string',
-			'avatar'	=> 'image'
-		];
+			$edit = [
+				'email'		=> 'required|email|unique:users,id,:id',
+				'name'		=> 'required|max:255',
+				'password' 	=> 'confirmed|min:6',
+				'github'	=> 'url',
+				'facebook'	=> 'url',
+				'twitter'	=> 'url',
+				'phone'		=> 'string',
+				'mobile'	=> 'string',
+				'avatar'	=> 'image'
+			];
 
-		return $rules;
+			return $edit;
+
+		} else {
+			$create = [
+				'email' 	=> 'required|email|unique:users',
+				'name'		=> 'required|max:255',
+				'password' 	=> 'required|confirmed|min:6',
+				'github'	=> 'url',
+				'facebook'	=> 'url',
+				'twitter'	=> 'url',
+				'phone'		=> 'string',
+				'mobile'	=> 'string',
+				'avatar'	=> 'image'
+			];
+
+			return $create;
+		}
     }
 }
