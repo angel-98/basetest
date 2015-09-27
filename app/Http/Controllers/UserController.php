@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserWasUpdated;
 use App\Http\Requests\UsersRequest;
 use App\Profile;
 use App\User;
@@ -26,7 +27,6 @@ class UserController extends Controller
 		$this->middleware('profilePerms', ['only' => ['edit', 'update']]);
 		$this->middleware('UserPermAccess', ['except' => ['edit', 'update', 'show']]);
 		$this->middleware('AvoidDeleteUser', ['only' => ['destroy']]);
-
 	}
 
     /**
@@ -105,61 +105,9 @@ class UserController extends Controller
      */
     public function update(UsersRequest $request, $id)
     {
-		// seleccionar la informacion de usuario
+
 		$user = User::findOrFail($id);
-
-		// -- agregar logica de salvado de password
-		if($request->input('password') != null){
-			$iuser = [
-				'password' => bcrypt($request->input('password')),
-				'name' => $request->input('name'),
-				'email' => $request->input('email')
-			];
-		} else {
-			$iuser = [
-				'name' => $request->input('name'),
-				'email' => $request->input('email')
-			];
-		}
-
-		// Seleccionar la informacion de perfil
-		$profile = Profile::where('user_id', '=', $id);
-
-		// -- agregar logica de salvado de avatar
-		if(isset($request['avatar'])){
-
-			$file = $request->file('avatar');
-			$newfilename = $request->file('avatar')->getClientOriginalName();
-			$file->move('images/users', $newfilename);
-
-			$iprofile = [
-				'avatar'	=> $newfilename,
-				'label'		=> $request->input('label'),
-				'resume'	=> $request->input('resume'),
-				'github'	=> $request->input('github'),
-				'facebook'	=> $request->input('facebook'),
-				'twitter'	=> $request->input('twitter'),
-				'phone'		=> $request->input('phone'),
-				'mobile'	=> $request->input('mobile')
-			];
-
-		} else {
-
-			$iprofile = [
-				'label'		=> $request->input('label'),
-				'resume'	=> $request->input('resume'),
-				'github'	=> $request->input('github'),
-				'facebook'	=> $request->input('facebook'),
-				'twitter'	=> $request->input('twitter'),
-				'phone'		=> $request->input('phone'),
-				'mobile'	=> $request->input('mobile')
-			];
-
-		}
-
-		$user->update($iuser);
-		$profile->update($iprofile);
-
+		event(new UserWasUpdated($request->all(), $id));
 		return redirect('usuarios/' . $user->slug);
     }
 
