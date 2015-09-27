@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserWasCreated;
 use App\Events\UserWasUpdated;
 use App\Http\Requests\UsersRequest;
 use App\Profile;
@@ -58,7 +59,8 @@ class UserController extends Controller
      */
     public function store(UsersRequest $request)
     {
-        //
+		event(new UserWasCreated($request->all()));
+		return redirect('usuarios');
     }
 
 	/**

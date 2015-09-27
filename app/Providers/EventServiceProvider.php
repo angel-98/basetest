@@ -18,6 +18,11 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\UserCreatingDataVariables',
             'App\Listeners\UserUpdateProfile'
         ],
+		'App\Events\UserWasCreated' => [
+			'App\Listeners\UserUploadNewAvatar',
+            'App\Listeners\UserCreatingNewDataVariables',
+            'App\Listeners\UserCreatingProfile'
+		],
     ];
 
     /**
